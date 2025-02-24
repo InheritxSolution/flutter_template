@@ -93,7 +93,6 @@ class ApiService {
     return PrettyDioLogger(
       requestHeader: true,
       requestBody: true,
-      responseHeader: true,
       responseBody: true,
       error: true,
       compact: true,

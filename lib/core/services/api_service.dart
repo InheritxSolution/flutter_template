@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import '../../core/utils/extensions/string_extension.dart';
 
@@ -91,11 +92,11 @@ class ApiService {
 
   PrettyDioLogger _loggerInterceptor() {
     return PrettyDioLogger(
-      requestHeader: true,
-      requestBody: true,
-      responseBody: true,
-      error: true,
-      compact: true,
+      requestHeader: kDebugMode,
+      requestBody: kDebugMode,
+      responseBody: kDebugMode,
+      error: kDebugMode,
+      compact: kDebugMode,
       maxWidth: 90,
     );
   }

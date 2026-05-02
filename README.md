@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" width="60" height="60" alt="Flutter">
   <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" width="60" height="60" alt="Dart">
-  <img src="https://raw.githubusercontent.com/hivedb/hive/master/hive_logo.png" width="60" height="60" alt="Hive">
+  <img src="https://pbs.twimg.com/media/GIaH54aXkAAcoWt.jpg" width="60" height="60" alt="Hive">
 </p>
 
 A high-performance Task Management application built with **Clean Architecture** and an **Offline-First** strategy. This project is a professional showcase of modern Flutter engineering by **Inheritx Solutions**.
@@ -29,11 +29,11 @@ This project follows **Clean Architecture** principles to ensure that the busine
 The following diagram illustrates how the **Task Management** feature is structured across the layers:
 
 <p align="center">
-  <img src="assets/visuals/architecture_specific.png" width="800" alt="Specific Architecture Diagram">
+  <img src="assets/visuals/app_architecture.png" width="800" alt="Specific Architecture Diagram">
 </p>
 
 ---
-
+![architecture_specific.png](assets/visuals/architecture_specific.png)
 ## 🛠 Core Technologies
 
 We leverage the following industry-standard technologies to build a robust application:

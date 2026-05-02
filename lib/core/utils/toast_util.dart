@@ -7,15 +7,15 @@ class ToastUtils {
       GlobalKey<ScaffoldMessengerState>();
 
   static void showSuccess(String message) {
-    _showToast(message, AppColors.successColor, AppColors.white);
+    _showToast(message, AppColors.success, AppColors.white);
   }
 
   static void showError(String message) {
-    _showToast(message, AppColors.errorColor, AppColors.white);
+    _showToast(message, AppColors.error, AppColors.white);
   }
 
   static void showInfo(String message) {
-    _showToast(message, AppColors.infoColor, AppColors.white);
+    _showToast(message, AppColors.info, AppColors.white);
   }
 
   static void _showToast(

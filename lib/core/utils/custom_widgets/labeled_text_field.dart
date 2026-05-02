@@ -126,7 +126,7 @@ class _LabeledTextFieldState extends State<LabeledTextField> {
             : null,
         enabledBorder: _getBorder(Colors.grey),
         focusedBorder: _getBorder(Theme.of(context).primaryColor),
-        errorBorder: _getBorder(AppColors.errorColor),
+        errorBorder: _getBorder(AppColors.error),
         disabledBorder: _getBorder(Colors.grey.shade300),
       ),
       validator: widget.validator,

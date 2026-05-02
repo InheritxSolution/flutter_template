@@ -8,7 +8,7 @@ class ApiConstants {
   static const login = '/auth/login';
   static const register = '/auth/register';
   static const profile = '/user/profile';
-  static const todos = '/todos/';
+  static const todos = '/todos';
 
   // API Headers
   static const Map<String, String> headers = {

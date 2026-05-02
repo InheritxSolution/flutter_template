@@ -1,20 +1,89 @@
-# Provider base structure
-## Description :
-- For Any project setup this is the base structure can be useful. All the required  library / plugin and setups have been implemented.
-- Below Items are covered in this structure
+# 🚀 Flutter Task Management - Clean Architecture
 
-> Project Setup
-> Loader and toast
-> API calls and all the networking required libraries and class
-> Util class and constants
-> Provider structure
-> Example of Login page and route to Home page
-> Example API Call
-> Basic Theme Setup
+<p align="center">
+  <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" width="60" height="60" alt="Flutter">
+  <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" width="60" height="60" alt="Dart">
+  <img src="https://raw.githubusercontent.com/hivedb/hive/master/hive_logo.png" width="60" height="60" alt="Hive">
+</p>
 
-Note : Reason for this setup is to give support to developer so that developer can directly import this project rename and start work on project & save his / her time. Reviews / Feedbacks appreciated.
+A high-performance Task Management application built with **Clean Architecture** and an **Offline-First** strategy. This project is a professional showcase of modern Flutter engineering by **Inheritx Solutions**.
 
-## Usage :
-- Main purpose of this structure is to make the project setup process easy for the flutter developer who is willing to start work with Provider. Therefore, user can directly download / get the project https://github.com/InheritxSolution/flutter_template.git,  then checkout the maharshi_provider_mvvm_skeleton branch
-- For more documentation about Provider refer below links
-  -  https://pub.dev/packages/provider
+---
+
+## ✨ Key Features
+
+- **🏆 Clean Architecture**: Strict separation of concerns (Data, Domain, Presentation).
+- **📶 Offline-First Strategy**: Seamless experience with local caching using **Hive DB**.
+- **🎨 Premium UI/UX**: Modern design system with smooth animations.
+- **⚡ Optimistic Updates**: Instant UI feedback for a lag-free user experience.
+- **🔄 Robust State Management**: Scalable architecture using the **Provider** pattern.
+- **🌐 Network Resilience**: Custom API service with Dio, featuring interceptors and error handling.
+
+---
+
+## 🏗 Architecture & Design
+
+This project follows **Clean Architecture** principles to ensure that the business logic is independent of frameworks, UI, and databases. This makes the app highly testable and maintainable.
+
+### Visual Architecture Flow
+The following diagram illustrates how the **Task Management** feature is structured across the layers:
+
+<p align="center">
+  <img src="assets/visuals/architecture_specific.png" width="800" alt="Specific Architecture Diagram">
+</p>
+
+---
+
+## 🛠 Core Technologies
+
+We leverage the following industry-standard technologies to build a robust application:
+
+| Technology | Purpose |
+| :--- | :--- |
+| **Flutter** | Cross-platform framework for high-fidelity UI |
+| **Provider** | Efficient state management and dependency injection |
+| **Hive** | Lightweight and blazing fast key-value database for offline caching |
+| **Dio** | Powerful HTTP client with support for interceptors and global config |
+| **ScreenUtil** | Ensuring UI consistency across all screen sizes |
+
+---
+
+## 📂 Project Structure
+
+```text
+lib/
+├── config/             # Theme, Routes, and Environment config
+├── core/               # Global services, utils, and base classes
+├── features/           # Feature-driven modules
+│   └── task/
+│       ├── data/       # Models, Repositories, Data Sources
+│       ├── domain/     # Entities, Use Cases, Repository Interfaces
+│       └── presentation/# Pages, Providers, Widgets
+└── main.dart           # Application entry point
+```
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+
+2. **Install dependencies**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Run the app**
+   ```bash
+   flutter run
+   ```
+
+---
+
+<p align="center">
+  <b>Developed & Maintained by Inheritx Solutions</b><br>
+  A Professional Showcase of Modern Flutter Engineering
+</p>

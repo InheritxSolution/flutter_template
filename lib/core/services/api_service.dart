@@ -165,6 +165,66 @@ class ApiService {
     }
   }
 
+  Future<ApiResponse<T>> put<T>(
+    String path, {
+    dynamic data,
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    bool requiresAuth = true,
+  }) async {
+    try {
+      if (!await _networkService.isConnected()) {
+        AppLogger.error(TextConstants.internetError);
+        throw ApiException(message: TextConstants.internetError);
+      }
+
+      final response = await _dio.put(
+        path,
+        data: data,
+        queryParameters: queryParameters,
+        options: options,
+      );
+
+      return _processResponse<T>(response);
+    } catch (e) {
+      if (e is DioException) {
+        AppLogger.error('API Error', e);
+        throw _handleError(e);
+      }
+      throw ApiException(message: e.toString());
+    }
+  }
+
+  Future<ApiResponse<T>> delete<T>(
+    String path, {
+    dynamic data,
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    bool requiresAuth = true,
+  }) async {
+    try {
+      if (!await _networkService.isConnected()) {
+        AppLogger.error(TextConstants.internetError);
+        throw ApiException(message: TextConstants.internetError);
+      }
+
+      final response = await _dio.delete(
+        path,
+        data: data,
+        queryParameters: queryParameters,
+        options: options,
+      );
+
+      return _processResponse<T>(response);
+    } catch (e) {
+      if (e is DioException) {
+        AppLogger.error('API Error', e);
+        throw _handleError(e);
+      }
+      throw ApiException(message: e.toString());
+    }
+  }
+
   ApiResponse<T> _processResponse<T>(Response response) {
     return ApiResponse<T>(
       data: response.data,

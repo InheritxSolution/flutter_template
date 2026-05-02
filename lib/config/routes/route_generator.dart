@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../feature/todo/screens/todo_screen.dart';
 import 'app_routes.dart';
+import '../../features/task/presentation/pages/task_page.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -10,17 +10,13 @@ class RouteGenerator {
     switch (settings.name) {
       case AppRoutes.initialRoute:
         return MaterialPageRoute(
-          builder: (_) =>
-              const TodoScreen(todoId: 1),
+          builder: (_) => const TaskPage(),
         );
 
       case AppRoutes.todoRoute:
-        if (args is int) {
-          return MaterialPageRoute(
-            builder: (_) => TodoScreen(todoId: args),
-          );
-        }
-        return _errorRoute();
+        return MaterialPageRoute(
+          builder: (_) => const TaskPage(),
+        );
 
       default:
         return _errorRoute();
